@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>検索</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/css/tempusdominus-bootstrap-4.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="./css/tempusdominus-bootstrap-4.min.css"> -->
+</head>
+
+<body>
+
+  <!-- ヘッダ-->
+  <header class="mx-auto mb-3 p-3 bg-primary">
+    <h1>検索</h1>
+  </header>
+
+  <main>
+    <!-- 検索フォーム-->
+    <div class="mx-3 mb-3 p-3 rounded border border-warning">
+      <form>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <label class="col-form-label" for="start">開始</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control datetimepicker-input" id="startDate" data-target="#startDate">
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" placeholder="hh:mm:ss">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <label class="col-form-label">終了</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control datetimepicker-input" id="endDate" data-target="#endDate">
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" placeholder="hh:mm:ss">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <label class="col-form-label" for="start">level</label>
+          </div>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" value="指定なし">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <label class="col-form-label" for="start">component</label>
+          </div>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" value="指定なし">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <label class="col-form-label" for="start">traceid</label>
+          </div>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" value="指定なし">
+          </div>
+        </div>
+        <div class="form-group row justify-content-center">
+          <button type="button" class="btn btn-primary w-25">検索</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- 検索結果-->
+    <!-- <div class="mx-1 mb-3 p-3 table-responsive-md"> -->
+    <div class="mx-1 mb-3 p-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <!-- <th style="width: 20%" scope="col">日時</th> -->
+            <thscope="col">日時</th>
+              <th scope="col">level</th>
+              <th scope="col">component</th>
+              <th scope="col">traceId</th>
+              <th scope="col">message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2021/01/01 01:01:01</th>
+            <td>INFO</td>
+            <td>tool</td>
+            <td>123456789</td>
+            <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+          </tr>
+          <tr>
+            <td>2021/01/01 01:01:01</th>
+            <td>INFO</td>
+            <td>tool</td>
+            <td>123456789</td>
+            <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+          </tr>
+          <tr>
+            <td>2021/01/01 01:01:01</th>
+            <td>INFO</td>
+            <td>tool</td>
+            <td>123456789</td>
+            <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+          </tr>
+          <tr>
+            <td>2021/01/01 01:01:01</th>
+            <td>INFO</td>
+            <td>tool</td>
+            <td>123456789</td>
+            <td>
+              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+            </td>
+          </tr>
+          <tr>
+            <td>2021/01/01 01:01:01</th>
+            <td>INFO</td>
+            <td>tool</td>
+            <td>123456789</td>
+            <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+          </tr>
+          <tr>
+            <td>2021/01/01 01:01:01</th>
+            <td>INFO</td>
+            <td>tool</td>
+            <td>123456789</td>
+            <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+          </tr>
+          <tr>
+            <td>2021/01/01 01:01:01</th>
+            <td>INFO</td>
+            <td>tool</td>
+            <td>123456789</td>
+            <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary w-25 mx-auto">続きを検索</button>
+      </div>
+    </div>
+
+  </main>
+  <!-- フッター-->
+  <footer class="mx-auto p-3 bg-primary">
+    コピーライト
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- <script src="./js/tempusdominus-bootstrap-4.min.js"></script> -->
+
+  <!-- Tempus Dominus Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/ja.min.js"
+    integrity="sha512-rElveAU5iG1CzHqi7KbG1T4DQIUCqhitISZ9nqJ2Z4TP0z4Aba64xYhwcBhHQMddRq27/OKbzEFZLOJarNStLg=="
+    crossorigin="anonymous"></script>
+  <!-- Moment.js -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      $('#startDate').datetimepicker({ locale: 'ja', dayViewHeaderFormat: 'YYYY年M月', format: 'YYYY/MM/DD' });
+      $('#endDate').datetimepicker({ locale: 'ja', dayViewHeaderFormat: 'YYYY年M月', format: 'YYYY/MM/DD' });
+      // $('#timePicker').datetimepicker({ locale: 'ja', format: 'HH:mm' });
+    });
+  </script>
+</body>
+
+</html>

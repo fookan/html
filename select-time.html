@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Bootstrap4 DateTimePicker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/css/tempusdominus-bootstrap-4.min.css" />
+        <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+            integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+            crossorigin="anonymous"></script>
+        <style type="text/css">
+            .datepicker-days th.dow:first-child,
+            .datepicker-days td:first-child {
+                color: #dc3545;
+            }
+
+            .datepicker-days th.dow:last-child,
+            .datepicker-days td:last-child {
+                color: #007bff;
+            }
+        </style>
+    </head>
+</head>
+
+<body>
+    <div class="container">
+        <h1>テストフォーム</h1>
+        <div class="jumbotron">
+            <h2>データピッカー日付と時間の選択</h2>
+            <p class="lead">カレンダーアイコンをクリックするとカレンダー表示、時間アイコンをクリックすると時間プルダウン表示</p>
+        </div>
+        <form>
+            <div class="form-group row">
+                <div class="col-sm-1">
+                    <label class="col-form-label" for="start">開始</label>
+                </div>
+                <div class="col-sm-3">
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input id="start-date" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                        <div class="input-group-prepend" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                        <input id="start-time" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" />
+                        <div class="input-group-prepend" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="far fa-clock"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">送信</button>
+        </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ja.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+                dayViewHeaderFormat: 'YYYY年 M月',
+                format: 'YYYY/MM/DD',
+                locale: moment.locale('ja', {
+                    week: { dow: 0 }
+                }),
+                viewMode: 'days',
+                buttons: {
+                    showClose: true
+                },
+                daysOfWeekDisabled: [0, 6],
+                minDate: moment().format('L'),
+                maxDate: moment().add(30, 'days').calendar()
+            });
+            $('#datetimepicker2').datetimepicker({
+                format: 'HH:mm:ss',
+                locale: 'ja',
+                buttons: {
+                    showClose: true
+                },
+            });
+        });
+    </script>
+
+</body>
+
+</html>
